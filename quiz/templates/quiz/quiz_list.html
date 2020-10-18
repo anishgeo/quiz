@@ -1,0 +1,12 @@
+
+<form>
+{% for question in context %}
+
+	{{question.question_label}}
+	
+	{% for answers in question.answer_set.all%}
+	   <li>{{answers.answer}}</li>
+	{%endfor%}
+{% endfor%}
+<button type="submit">Submit</button>
+</form>
